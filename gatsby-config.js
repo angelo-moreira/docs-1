@@ -192,7 +192,8 @@ plugins.push(
       name,
       branch,
       rootDir: 'docs/source',
-      patterns: isLocalMode ? 'config.json' : undefined
+      patterns:
+        isLocalMode || process.env.DOCS_LOCAL ? 'config.json' : undefined
     }
   }))
 );
