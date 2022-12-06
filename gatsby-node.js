@@ -169,6 +169,7 @@ exports.createPages = async ({actions, graphql}) => {
       context: {
         id,
         versions,
+        configs,
         ...configs[sourceInstanceName]
       }
     });
