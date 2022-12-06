@@ -181,6 +181,7 @@ exports.createPages = async ({actions, graphql}) => {
       component: require.resolve('./src/templates/tag'),
       context: {
         tag: tag.name,
+        configs,
         ...configs.technotes
       }
     });
